@@ -4,7 +4,8 @@
   "info": {
     "singularName": "user-resume",
     "pluralName": "user-resumes",
-    "displayName": "User Resume"
+    "displayName": "User Resume",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,24 @@
       "type": "email"
     },
     "username": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "jobTitle": {
+      "type": "string"
+    },
+    "number": {
+      "type": "string"
+    },
+    "email": {
       "type": "string"
     }
   }

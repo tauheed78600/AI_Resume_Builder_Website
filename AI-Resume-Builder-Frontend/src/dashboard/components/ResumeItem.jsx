@@ -6,7 +6,7 @@ function ResumeItem({resume}) {
     console.log("inside resumeItem component")
   return (
     <div>
-     <Link to={"/dashboard/resume/"+resume.resumeid+"/edit"}>
+     <Link to={"/dashboard/resume/"+resume.documentId+"/edit"}>
      <div>
         <div className='p-14 bg-secondary flex items-center justify-center h-[280px]
          border-primary rounded-large hover:scale-110 transition-all hover: shadow-md shadow-primary'>
