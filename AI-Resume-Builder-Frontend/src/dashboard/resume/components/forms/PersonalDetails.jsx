@@ -5,7 +5,6 @@ import { resumeInfoContext } from '../../../../context/ResumeInfoContext'
 import { useAsyncError, useParams } from 'react-router-dom'
 import GlobalAPI from '../../../../../service/GlobalAPI'
 import { LoaderCircle } from 'lucide-react'
-import { Toaster }  from '../../../../components/ui/sonner'
 import { toast } from 'sonner'
 
 function PersonalDetails({enablenext}) {
@@ -44,6 +43,7 @@ function PersonalDetails({enablenext}) {
         const data = {
             data: formData
         }
+        console.log(params.resumeid)
         GlobalAPI.updateResumeDetail(params.resumeid, data).then(resp=>{
                 console.log("returned Response")
                 enablenext(true)

@@ -1,90 +1,55 @@
-export default {
-    personalDetails: {
-      fullName: "John Doe",
-      email: "john.doe@example.com",
-      phone: "+1-234-567-890",
-      address: "123 Main St, Springfield, USA",
-      linkedIn: "https://linkedin.com/in/johndoe",
-      github: "https://github.com/johndoe",
-      portfolio: "https://johndoe.com",
-      profileSummary: "A dedicated and driven software engineer with 5+ years of experience in building web applications and improving performance. Passionate about creating innovative solutions to solve complex problems.",
-      themeColor: "#ff6666",
-      jobTitle: "Software Developer"
-    },
-    education: [
+export default{
+  firstName:'James',
+  lastName:'Carter',
+  jobTitle:'full stack developer',
+  address:'525 N tryon Street, NC 28117',
+  phone:'(123)-456-7890',
+  email:'exmaple@gmail.com',
+  themeColor:"#ff6666",
+  summery:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  experience:[
       {
-        degree: "Bachelor of Science in Computer Science",
-        institution: "University of Technology",
-        location: "Springfield, USA",
-        startDate: "August 2015",
-        endDate: "May 2019",
-        gpa: "3.8/4.0",
-        description: "Focused on software engineering, algorithms, and web development. Completed various projects related to full-stack development and machine learning."
+          
       }
-    ],
-    experience: [
+  ],
+  education:[
+      
+  ],
+  skills:[
       {
-        jobTitle: "Software Engineer",
-        company: "Tech Solutions Inc.",
-        location: "San Francisco, USA",
-        startDate: "June 2019",
-        endDate: "Present",
-        responsibilities: [
-          "Developed and maintained web applications using React.js and Node.js, improving the efficiency of user operations by 20%.",
-          "Collaborated with cross-functional teams to deliver high-quality products.",
-          "Implemented unit and integration tests using Jest, achieving 95% test coverage.",
-          "Led a project that integrated third-party APIs, saving the company $50k annually."
-        ]
+          id:1,
+          name:'Angular',
+          rating:80,
       },
       {
-        jobTitle: "Junior Web Developer",
-        company: "Startup Hub",
-        location: "New York, USA",
-        startDate: "June 2017",
-        endDate: "May 2019",
-        responsibilities: [
-          "Designed and developed responsive web pages using HTML, CSS, and JavaScript.",
-          "Worked closely with the UX team to ensure smooth user experiences.",
-          "Optimized website performance, resulting in a 30% increase in page load speed.",
-          "Assisted in database management and maintenance."
-        ]
-      }
-    ],
-    skills: [
-      "JavaScript (React.js, Node.js, Express.js)",
-      "HTML5, CSS3, SASS",
-      "RESTful APIs",
-      "Unit Testing (Jest, Mocha)",
-      "Version Control (Git, GitHub)",
-      "Database Management (MySQL, MongoDB)",
-      "Problem Solving",
-      "Agile Methodologies"
-    ],
-    certifications: [
-      {
-        name: "Certified JavaScript Developer",
-        institution: "Code Institute",
-        dateObtained: "March 2021"
+          id:1,
+          name:'React',
+          rating:100,
       },
       {
-        name: "AWS Certified Solutions Architect",
-        institution: "Amazon Web Services",
-        dateObtained: "November 2022"
-      }
-    ],
-    projects: [
-      {
-        projectName: "E-Commerce Web Application",
-        technologies: ["React.js", "Node.js", "MongoDB"],
-        description: "Developed a fully functional e-commerce web application where users can browse products, add to cart, and place orders. Integrated with Stripe for payment processing."
+          id:1,
+          name:'MySql',
+          rating:80,
       },
       {
-        projectName: "Personal Portfolio Website",
-        technologies: ["Gatsby", "GraphQL", "Styled Components"],
-        description: "Created a personal portfolio website showcasing my projects, blog, and resume. The website is optimized for SEO and performance."
+          id:1,
+          name:'React Native',
+          rating:100,
       }
-    ],
-    languages: ["English (Fluent)", "Spanish (Intermediate)"],
-    hobbies: ["Photography", "Traveling", "Chess"]
-  };
-  
+  ]
+}
+
+
+// {
+//     "data": {
+//         "title": "SE-2",
+//         "city": "Pune",
+//         "state": "Maharashtra",
+//         "startDate": "2024-10-26",
+//         "endDate": "2024-10-11",
+//         "summery": "<li>Developed ...</li>",
+//         "user_resume": {
+//             "resumeid": "d11d7745-5242-431b-a715-6a029f3f7b0a"
+//         }
+//     }
+// }

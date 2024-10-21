@@ -4,6 +4,9 @@ import { resumeInfoContext } from '../../../context/ResumeInfoContext'
 import { ArrowBigLeft, ArrowRight, LayoutGrid } from 'lucide-react'
 import { Button } from '../../../components/ui/button'
 import { useSearchParams } from 'react-router-dom'
+import Objective from './forms/Objective'
+import Experience from './forms/Experience'
+import Education from './forms/Education'
 
 function FormSection() {
 
@@ -26,7 +29,11 @@ function FormSection() {
         </div>
       </div>
       {/* Personal Details */}
-     {activeFormIndex==1? <PersonalDetails enablenext = {(v)=>setEnablenext(v)}/> :null}
+     {activeFormIndex == 1? <PersonalDetails enablenext = {(v)=>setEnablenext(v)}/>:
+      activeFormIndex == 2? <Objective enablenext = {(v)=>setEnablenext(v)}/>:
+      activeFormIndex == 3? <Experience enablenext = {(v)=>setEnablenext(v)}/>:
+      activeFormIndex == 4? <Education enablenext = {(v)=>setEnablenext(v)}/>
+      :null}
     </div>
   )
 }

@@ -42,6 +42,15 @@
     },
     "email": {
       "type": "string"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "experiences": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::experience.experience",
+      "mappedBy": "user_resume"
     }
   }
 }

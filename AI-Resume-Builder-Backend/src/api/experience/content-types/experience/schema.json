@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "experiences",
+  "info": {
+    "singularName": "experience",
+    "pluralName": "experiences",
+    "displayName": "Experience",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "summery": {
+      "type": "text"
+    },
+    "user_resume": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-resume.user-resume",
+      "inversedBy": "experiences"
+    },
+    "companyName": {
+      "type": "string"
+    }
+  }
+}

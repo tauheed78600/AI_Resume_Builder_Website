@@ -11,7 +11,6 @@ const axiosClient = axios.create({
 })
 
 const createNewResume = async (data) => {
-    console.log("data in line 13", data)
     try {
         const response = await axiosClient.post('/user-resumes', data);
         console.log('Response:', response);
@@ -22,6 +21,29 @@ const createNewResume = async (data) => {
 
 const getUserResumes =(userEmail) =>axiosClient.get('/user-resumes?filters[useremail][$eq]='+userEmail)
 
-const updateResumeDetail =(id, data) =>axiosClient.put('/user-resumes/' + id, data)
+const updateResumeDetail =async(id, data) =>{
+    try{
+    console.log('Updating resume with ID:', id, data);
+    const res = await axiosClient.put('/user-resumes/' + id, data)
+    console.log("res in line 26", res.data.data)
+    }catch(error){
+        console.error('Error line 30:', error.response || error.message);
+    }
+}
 
-export default {createNewResume, getUserResumes, updateResumeDetail}
+const updateExperience = async(id, data)=>{
+    console.log("id data in line 35", id, data)
+    try{
+        const res = await axiosClient.post('/experiences/', data)
+    }catch(error){
+        console.error('Error line 39:', error.response || error.message);
+    }
+}
+
+
+export default {
+    createNewResume, 
+    getUserResumes, 
+    updateResumeDetail,
+    updateExperience
+}

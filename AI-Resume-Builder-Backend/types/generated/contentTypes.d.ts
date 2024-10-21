@@ -1,5 +1,39 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
+export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
+  collectionName: 'experiences';
+  info: {
+    singularName: 'experience';
+    pluralName: 'experiences';
+    displayName: 'Experience';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    city: Schema.Attribute.String;
+    state: Schema.Attribute.String;
+    startDate: Schema.Attribute.Date;
+    endDate: Schema.Attribute.Date;
+    summery: Schema.Attribute.Text;
+    user_resume: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::user-resume.user-resume'
+    >;
+    companyName: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+  };
+}
+
 export interface ApiUserResumeUserResume extends Struct.CollectionTypeSchema {
   collectionName: 'user_resumes';
   info: {
@@ -22,6 +56,11 @@ export interface ApiUserResumeUserResume extends Struct.CollectionTypeSchema {
     jobTitle: Schema.Attribute.String;
     number: Schema.Attribute.String;
     email: Schema.Attribute.String;
+    summary: Schema.Attribute.Text;
+    experiences: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::experience.experience'
+    >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -827,6 +866,7 @@ export interface AdminTransferTokenPermission
 declare module '@strapi/strapi' {
   export module Public {
     export interface ContentTypeSchemas {
+      'api::experience.experience': ApiExperienceExperience;
       'api::user-resume.user-resume': ApiUserResumeUserResume;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;

@@ -1,6 +1,10 @@
 import React, { useContext } from 'react'
 import { resumeInfoContext } from '../../../context/ResumeInfoContext'
 import PersonalDetails from './preview/PersonalDetails'
+import Objective from './forms/Objective'
+import SummaryPreview from './preview/SummaryPreview'
+import ExperiencePreview from './preview/ExperiencePreview'
+import EducationPreview from './preview/EducationPreview'
 
 function ResumePreview() {
 
@@ -9,11 +13,12 @@ function ResumePreview() {
     return (
         <div className='shadow-lg h-full p-14 border-t-[20px]'
         style = {{
-            borderColor: resumeInfo?.personalDetails.themeColor
+            borderColor: resumeInfo?.themeColor
         }}>
         <PersonalDetails resumeInfo = {resumeInfo}/>
-
-
+        <SummaryPreview resumeInfo = {resumeInfo}/>
+        <ExperiencePreview resumeInfo = {resumeInfo}/>
+        <EducationPreview resumeInfo = {resumeInfo}/>
         </div>
     )
 }
